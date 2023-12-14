@@ -20,9 +20,9 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
  */
-public class TwoSum {
+public class A_Easy_TwoSum {
 
-    // Brute Force, Time Complexity O(n2), Space Complexity O(1)
+    // Brute Force, Time Complexity O(n^2), Space Complexity O(1)
     public int[] twoSum_Brute(int[] nums, int target) {
 
         int[] arr = new int[2];
