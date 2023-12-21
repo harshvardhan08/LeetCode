@@ -20,6 +20,7 @@ public class D_Easy_IsAnagram {
     //Space Complexity (n + m)
     public boolean isAnagram_Brute(String s, String t) {
 
+        //maps to hold count of each char
         Map<Character, Integer> map1 = new HashMap<>();
         Map<Character, Integer> map2 = new HashMap<>();
 
@@ -27,6 +28,7 @@ public class D_Easy_IsAnagram {
             return false;
         }
 
+        //count occurence of each char
         for(int i=0; i<s.length(); i++){
             char sIdx = s.charAt(i);
             char tIdx = t.charAt(i);
@@ -46,6 +48,7 @@ public class D_Easy_IsAnagram {
             }
         }
 
+        //iterate thru map 1 and get the value from map2, compare counts
         for (Map.Entry<Character, Integer> entry : map1.entrySet()) {
             char key = entry.getKey();
             if(map2.get(key) ==null){
