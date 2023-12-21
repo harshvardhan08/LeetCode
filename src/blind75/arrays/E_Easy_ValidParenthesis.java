@@ -20,6 +20,9 @@ import java.util.Stack;
 public class E_Easy_ValidParenthesis {
     public boolean isValid(String s) {
 
+        //Use Stack if open bracket matches push the closing bracket to stack.
+        // when closing bracket cond is evaluated do pop on stack and comapre with closing bracket value, if doesnt match then return true
+
         //Time Complexity is O(n)
         // Space complexity O(n)
 
