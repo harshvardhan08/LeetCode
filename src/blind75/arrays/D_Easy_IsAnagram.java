@@ -16,6 +16,36 @@ Output: false
 public class D_Easy_IsAnagram {
 
 
+    public boolean isAnagram_optimal(String s, String t) {
+
+        //Time Complexity O(n)
+        //Space complexity O(1)
+
+        int[] map = new int[26];
+
+        if(s.length()!=t.length()){
+            return false;
+        }
+
+        for(int i=0; i<s.length(); i++){
+            char currChar = s.charAt(i);
+            map[currChar - 'a']++;
+        }
+
+        for(int i=0; i<s.length(); i++){
+            char currChar = t.charAt(i);
+            map[currChar - 'a']--;
+        }
+
+        for(int x: map){
+            if(x!=0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     //Time Complexity O(n2) - n is size of string, worst case scenario is strings have unique chars
     //Space Complexity (n + m)
     public boolean isAnagram_Brute(String s, String t) {
